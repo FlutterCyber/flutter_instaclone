@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_instaclone/pages/home_page.dart';
 import 'package:flutter_instaclone/pages/signup_up.dart';
 
 class SignInPage extends StatefulWidget {
@@ -16,6 +17,10 @@ class _SignInPageState extends State<SignInPage> {
 
   _callSignUpPage() {
     Navigator.pushReplacementNamed(context, SignUpPage.id);
+  }
+
+  _callHomePage() {
+    Navigator.pushReplacementNamed(context, HomePage.id);
   }
 
   @override
@@ -94,18 +99,21 @@ class _SignInPageState extends State<SignInPage> {
                     height: 10,
                   ),
                   //login
-                  Container(
-                    height: 50,
-                    padding: EdgeInsets.only(left: 10, right: 10),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                          color: Colors.white54.withOpacity(0.2), width: 2),
-                      borderRadius: BorderRadius.circular(7),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Sign in",
-                        style: TextStyle(color: Colors.white, fontSize: 17),
+                  GestureDetector(
+                    onTap: _callHomePage,
+                    child: Container(
+                      height: 50,
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: Colors.white54.withOpacity(0.2), width: 2),
+                        borderRadius: BorderRadius.circular(7),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "Sign in",
+                          style: TextStyle(color: Colors.white, fontSize: 17),
+                        ),
                       ),
                     ),
                   ),

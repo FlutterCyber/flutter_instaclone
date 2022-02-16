@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_instaclone/pages/home_page.dart';
 import 'package:flutter_instaclone/pages/signin_page.dart';
 import 'package:flutter_instaclone/pages/signup_up.dart';
 import 'package:flutter_instaclone/pages/splash_page.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         SplashPage.id: (context) => SplashPage(),
         SignUpPage.id: (context) => SignUpPage(),
         SignInPage.id: (context) => SignInPage(),
+        HomePage.id: (context) => HomePage(),
       },
     );
   }
